@@ -17,16 +17,9 @@ module Deezer
     attribute :rank           # The track's Deezer rank
     attribute :release_date   # The track's release date
     attribute :preview        # The url of track's preview file. This file contains the first 30 seconds of the track
-    attribute :artist         # artist object containing : id, name, link, picture, nb_album, nb_fan, radio
-    attribute :album          # album object containing : id, title, link, cover, release_date
 
-    def album
-      Album.new(@album)
-    end
-
-    def artist
-      Artist.new(@artist)
-    end
+    belongs_to :album,  class: Deezer::Album
+    belongs_to :artist, class: Deezer::Artist
 
   end
 end

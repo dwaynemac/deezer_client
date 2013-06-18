@@ -2,9 +2,19 @@ PATH
   remote: .
   specs:
     deezer_client (0.0.2)
-      logical_model (~> 0.5.2)
+      logical_model (~> 0.5.3)
       protected_attributes
       railties (>= 3.1)
+
+PATH
+  remote: ~/ws/padma/libraries/logical_model
+  specs:
+    logical_model (0.5.3)
+      activemodel
+      activesupport
+      ethon (= 0.4.2)
+      kaminari (~> 0.13.0)
+      typhoeus (= 0.5.0.alpha)
 
 GEM
   remote: http://rubygems.org/
@@ -36,12 +46,6 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
       railties (>= 3.0.0)
-    logical_model (0.5.2)
-      activemodel
-      activesupport
-      ethon (= 0.4.2)
-      kaminari (~> 0.13.0)
-      typhoeus (= 0.5.0.alpha)
     mime-types (1.23)
     minitest (4.7.4)
     multi_json (1.7.7)
@@ -68,3 +72,4 @@ PLATFORMS
 
 DEPENDENCIES
   deezer_client!
+  logical_model!
