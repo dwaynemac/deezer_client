@@ -1,12 +1,11 @@
-require 'protected_attributes'
+require 'deezer_client/service_configuration'
 module Deezer
   # Track on Deezer.
   # API documentation: http://developers.deezer.com/api/track
   class Track < LogicalModel
-    use_hydra Deezer::HYDRA
+    include DeezerClient::ServiceConfiguration
 
-    set_resource_url 'api.deezer.com/2.0', '/track'
-    force_ssl
+    set_resource_path '/track'
 
     attribute :id             # The track's Deezer id
     attribute :readable       # true if the track is readable in the player for the current user

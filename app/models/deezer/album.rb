@@ -1,10 +1,11 @@
+require 'deezer_client/service_configuration'
+
 module Deezer
   # API Doc: http://developers.deezer.com/api/album
   class Album < LogicalModel
-    use_hydra Deezer::HYDRA
+    include DeezerClient::ServiceConfiguration
 
-    set_resource_url 'api.deezer.com/2.0', '/album'
-    force_ssl
+    set_resource_path '/album'
 
     attribute :id             # The album's Deezer id
     attribute :title          # The album's title
