@@ -1,9 +1,9 @@
 = Usage
 
-For Rails 4, in your Gemfile add:
+For Rails 4, in your Gemfile add: (Should work in Rails 3 too, but I haven't tested it yet)
 
-  gem 'protected_attributes'
-  gem 'logical_model'
+  gem 'protected_attributes' # I'm trying to put this into them but haven't managed yet.
+  gem 'logical_model'        # I'm trying to put this into them but haven't managed yet.
   gem 'deezer_client'
 
 Then you can do:
