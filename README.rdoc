@@ -16,3 +16,18 @@ Then you can do:
 
   track.album # <Deezer::Album: ....>
   track.album.title # "While a Nation Sleeps..."
+
+== Async read
+
+This client uses Typhoeus. So you can run several requests on parallel
+
+  Deezer::Track.async_find(67606633) { |res| @track = res }
+  Deezer::Album.async_find(6618908) { |res| @album = res }
+
+  @track # nil
+  @album # nil
+
+  HYDRA.run
+
+  @track # <Deezer::Track: ....>
+  @album # <Deezer::Album: ....>
