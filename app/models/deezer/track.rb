@@ -18,7 +18,10 @@ module Deezer
     attribute :release_date   # The track's release date
     attribute :preview        # The url of track's preview file. This file contains the first 30 seconds of the track
 
+    # album object initialized with: id, title, link, cover, release_date
     belongs_to :album,  class: Deezer::Album
+
+    # artist object initialized with: id, name, link, picture, nb_album, nb_fan, radio
     belongs_to :artist, class: Deezer::Artist
 
   end
