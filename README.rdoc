@@ -27,7 +27,7 @@ This client uses Typhoeus. So you can run several requests on parallel
   @track # nil
   @album # nil
 
-  HYDRA.run
+  Deezer::HYDRA.run
 
   @track # <Deezer::Track: ....>
   @album # <Deezer::Album: ....>
