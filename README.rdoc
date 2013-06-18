@@ -1,10 +1,23 @@
+= Deezer
+
+www.deezer.com.ar
+
+Deezer is an online music library/player. Similar to Spotify and Grooveshark.
+It has an API for interaction with it's content.
+
+DeezerClient is simply that. A Ruby wrapper around Deezer's API using at it's core Typhoues through our library LogicalModel
+
 = Usage
+
+== Installation
 
 For Rails 4, in your Gemfile add: (Should work in Rails 3 too, but I haven't tested it yet)
 
   gem 'protected_attributes' # I'm trying to put this into them but haven't managed yet.
   gem 'logical_model'        # I'm trying to put this into them but haven't managed yet.
   gem 'deezer_client'
+
+== Using it
 
 Then you can do:
 
@@ -17,7 +30,7 @@ Then you can do:
   track.album # <Deezer::Album: ....>
   track.album.title # "While a Nation Sleeps..."
 
-== Async read
+=== Async read
 
 This client uses Typhoeus. So you can run several requests on parallel
 
