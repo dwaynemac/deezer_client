@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "deezer_client"
   gem.require_paths = ["lib"]
-  gem.version       = '0.0.1'
+  gem.version       = '0.0.2'
 
   gem.add_dependency "railties", ">= 3.1"
   gem.add_dependency 'logical_model', "~> 0.5.0"
