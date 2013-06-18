@@ -1,8 +1,0 @@
-
-
-
-For Rails 4, in your Gemfile add:
-
-  gem 'protected_attributes'
-  gem 'logical_model'
-  gem 'deezer_client'

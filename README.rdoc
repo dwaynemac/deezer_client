@@ -1,0 +1,18 @@
+= Usage
+
+For Rails 4, in your Gemfile add:
+
+  gem 'protected_attributes'
+  gem 'logical_model'
+  gem 'deezer_client'
+
+Then you can do:
+
+  track = Deezer::Track.find(67606633)
+  track.title # "Until Nothing Remains"
+
+  track.artist # <Deezer::Artist: ....>
+  track.artist.name # "Boy Sets Fire"
+
+  track.album # <Deezer::Album: ....>
+  track.album.title # "While a Nation Sleeps..."
