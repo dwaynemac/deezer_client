@@ -1,6 +1,6 @@
 = Deezer
 
-www.deezer.com.ar
+www.deezer.com
 
 Deezer is an online music library/player. Similar to Spotify and Grooveshark.
 It has an API for interaction with it's content.
