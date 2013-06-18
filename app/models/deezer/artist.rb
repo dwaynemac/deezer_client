@@ -1,6 +1,8 @@
 module Deezer
   # API Doc: http://developers.deezer.com/api/album
   class Artist < LogicalModel
+    use_hydra Deezer::HYDRA
+
     set_resource_url 'api.deezer.com/2.0', '/artist'
     force_ssl
 

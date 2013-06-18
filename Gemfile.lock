@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     deezer_client (0.0.2)
-      logical_model (~> 0.5.3)
+      logical_model (~> 0.5.4)
       protected_attributes
       railties (>= 3.1)
 
@@ -36,7 +36,7 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
       railties (>= 3.0.0)
-    logical_model (0.5.3)
+    logical_model (0.5.4)
       activemodel
       activesupport
       ethon (= 0.4.2)

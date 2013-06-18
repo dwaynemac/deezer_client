@@ -3,6 +3,7 @@ module Deezer
   # Track on Deezer.
   # API documentation: http://developers.deezer.com/api/track
   class Track < LogicalModel
+    use_hydra Deezer::HYDRA
 
     set_resource_url 'api.deezer.com/2.0', '/track'
     force_ssl

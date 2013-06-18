@@ -1,5 +1,1 @@
-if(defined?(Rails))
-  unless defined?(HYDRA)
-    HYDRA = Typhoeus::Hydra.new
-  end
-end
+Deezer::HYDRA = Typhoeus::Hydra.new
