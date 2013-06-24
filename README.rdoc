@@ -49,3 +49,11 @@ This client uses Typhoeus. So you can run several requests on parallel
 
   @track # <Deezer::Track: ....>
   @album # <Deezer::Album: ....>
+
+=== OAuth
+
+ @your_access_toeken = # ... get_access_token ...
+
+ Deezer::User.set_api_key 'access_token', @your_access_token
+
+ # now all requests by Deezer::User will include 'access_token' parameter
