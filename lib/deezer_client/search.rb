@@ -23,6 +23,8 @@ module DeezerClient
         do_with_resource_path(new_path) do
           self.async_all(q: query){ |collection| response_manager_block.call(collection) }
         end
+
+        return true
       end
 
       # @param [String] query
