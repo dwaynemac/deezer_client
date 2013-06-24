@@ -1,9 +1,11 @@
+require 'deezer_client/search'
 require 'deezer_client/service_configuration'
 module Deezer
   # Track on Deezer.
   # API documentation: http://developers.deezer.com/api/track
   class Track < LogicalModel
     include DeezerClient::ServiceConfiguration
+    include DeezerClient::Search
 
     set_resource_path '/track'
 

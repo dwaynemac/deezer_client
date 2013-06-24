@@ -1,9 +1,12 @@
+require 'deezer_client/search'
 require 'deezer_client/service_configuration'
 
 module Deezer
   # API Doc: http://developers.deezer.com/api/album
   class Artist < LogicalModel
     include DeezerClient::ServiceConfiguration
+
+    include DeezerClient::Search
 
     set_resource_path '/artist'
 
