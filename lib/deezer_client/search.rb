@@ -8,25 +8,32 @@ module DeezerClient
 
     module ClassMethods
 
-      def search(query)
-        bkp_resource_path = @resource_path
-
-        case bkp_resource_path
+      # @param [String] query
+      # @param [Proc] response_manager_block. Will receive result collection
+      def async_search(query,&response_manager_block)
+        new_path = case @resource_path
           when '/track'
-            @resource_path = "/search"
+            "/search"
           when '/album', '/artist', '/user'
-            @resource_path = "/search#{bkp_resource_path}"
+            "/search#{@resource_path}"
           else
             raise 'Cant use search with this resource'
         end
 
-        res = self.all(q: query)
-
-        @resource_path = bkp_resource_path
-
-        return res
+        do_with_resource_path(new_path) do
+          self.async_all(q: query){ |collection| response_manager_block.call(collection) }
+        end
       end
-    end
 
+      # @param [String] query
+      # @return [Array<self>]
+      def search(query)
+        result = nil
+        async_search(query){|collection| result = collection }
+        hydra.run
+        return result
+      end
+
+    end
   end
 end

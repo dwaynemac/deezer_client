@@ -30,4 +30,3 @@ module Deezer
     end
   end
 end
-
